@@ -1,7 +1,7 @@
 /*global chrome*/
 import React, { useEffect, useState } from 'react';
 
-const MessageList = () => {
+const MessageList = ({ isSRChecked }) => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -62,7 +62,10 @@ const MessageList = () => {
         </div>
       </li>
       {messages.map((message) => (
-          <li key={message.id} className={`message ${message.read ? 'read' : ''}`}>
+          <li key={message.id} className={`${message.read && isSRChecked ? (
+              'message read') : message.read && !isSRChecked ? (
+                  'hidden') : (
+                      'message')}`}>
             <div className="grid grid-cols-10 gap-x-5 px-0.5 w-full">
               <div className="h-10 w-1/10">
                 {message.priority === 'high' &&

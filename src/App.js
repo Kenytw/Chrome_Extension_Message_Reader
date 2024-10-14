@@ -1,9 +1,12 @@
 import { ListBulletIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
 import './App.css';
-import MessageList from "./popup/popup";
+import MessageList from './popup/popup';
+import Options from './options/options';
 
 function App() {
+    const [isSRChecked, setIsSRChecked] = useState(true);
+
     const [ btnM, setBtnM ] = useState('btn-clicked');
     const [ btnO, setBtnO ] = useState('btn');
     const [ btnClicked, setBtnClicked ] = useState(1);
@@ -46,10 +49,10 @@ function App() {
                 </div>
             </div>
             <div className={`overflow-y-auto ${btnClicked === 1 ? '' : 'hidden'} max-h-full`}>
-                <MessageList/>
+                <MessageList isSRChecked={isSRChecked} />
             </div>
             <div className={`overflow-y-auto ${btnClicked === 2 ? '' : 'hidden'} max-h-full`}>
-                Options
+                <Options isSRChecked={isSRChecked} setIsSRChecked={setIsSRChecked} />
             </div>
         </div>
     </>

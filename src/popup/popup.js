@@ -53,11 +53,18 @@ const MessageList = () => {
   }
 
   return (
-    <ul className="divide-y divide-gray-200">
+    <ul className="divide-y divide-gray-200 overflow-y-auto">
+      <li>
+        <div className="grid grid-cols-7 gap-x-0.5 px-0.5 w-full">
+          <div className="h-10 label flex items-center text-sm font-medium text-black underline decoration-sky-500">Priority</div>
+          <div className="col-span-5 px-2 h-10 label flex items-center text-sm font-medium text-black underline decoration-sky-500">Content</div>
+          <div className="h-10 px-5 label flex items-center text-sm font-medium text-black underline decoration-sky-500">Read</div>
+        </div>
+      </li>
       {messages.map((message) => (
           <li key={message.id} className={`message ${message.read ? 'read' : ''}`}>
-            <div className="grid grid-cols-10 gap-x-5 px-0.5">
-              <div className="h-12">
+            <div className="grid grid-cols-10 gap-x-5 px-0.5 w-full">
+              <div className="h-10 w-1/10">
                 {message.priority === 'high' &&
                     <div className="mt-1 flex items-center gap-x-1.5">
                       <div className="flex-none rounded-full bg-red-500/20 p-1">
@@ -66,13 +73,13 @@ const MessageList = () => {
                     </div>
                 }
               </div>
-              <div className="col-span-8 h-12">
+              <div className="col-span-8 h-10 w-full px-5">
                 <p className={`text-sm ${message.read ? 'font-semi' : 'font-semibold'} leading-6 text-gray-900`}>{message.content}</p>
                 <p className="mt-1 truncate text-xs leading-5 text-gray-500">{new Date(message.timestamp).toLocaleString()}</p>
               </div>
-              <div className="h-12">
-                <div className="mt-1 flex items-center gap-x-1.5">
-                  <input type="checkbox" className="accent-emerald-500/25" checked={!!message.read}
+              <div className="h-10 w-1/10">
+                <div className="mt-1 flex justify-items-end gap-x-1.5">
+                  <input type="checkbox" className="bg-blue-600" checked={!!message.read}
                          onClick={() => markAsReadOrNot(message.id)}/>
                 </div>
               </div>

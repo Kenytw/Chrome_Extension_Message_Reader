@@ -2,6 +2,8 @@
 ## Overview
 This Chrome extension displays messages from an organization's admin to users. The extension shows a badge icon when there are unread messages, provides a popup interface for users to view messages, and allows users to mark messages as read. It also stores message history locally and supports background message checking.
 
+[![](/./src/images/Screenshot1.png)](./src/images/SR.mp4)
+
 ---
 
 ## Table of Contents

@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "id": "msg1",
+      "content": "Team meeting at 3 PM today 🙂",
+      "priority": "high",
+      "timestamp": "2024-10-30T15:00:00Z",
+      "read": false
+    },
+    {
+      "id": "msg2",
+      "content": "Team meeting at 5 PM today 🙂",
+      "priority": "low",
+      "timestamp": "2024-10-31T17:00:00Z",
+      "read": false
+    },
+    {
+      "id": "msg3",
+      "content": "Team meeting at 2 PM today 🙂",
+      "priority": "high",
+      "timestamp": "2024-11-05T14:00:00Z",
+      "read": false
+    },
+    {
+      "id": "msg4",
+      "content": "Team meeting at 1 PM today 🙂",
+      "priority": "low",
+      "timestamp": "2024-11-07T13:00:00Z",
+      "read": false
+    },
+    {
+      "id": "msg5",
+      "content": "Team meeting at 10 AM today 🙂",
+      "priority": "high",
+      "timestamp": "2024-11-06T10:00:00Z",
+      "read": false
+    }
+  ]
+}

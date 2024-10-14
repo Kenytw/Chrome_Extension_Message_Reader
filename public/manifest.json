@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Admin Messages Extension",
+  "version": "1.0",
+  "description": "Displays admin messages to users",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "./assets/icon16.png",
+    "32": "./assets/icon32.png",
+    "48": "./assets/icon48.png",
+    "128": "./assets/icon128.png"
+  },
+  "permissions": ["storage", "alarms", "notifications"]
+}

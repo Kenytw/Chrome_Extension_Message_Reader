@@ -57,7 +57,8 @@ To install the extension without building it, you can use the source code direct
 
 ---
 
-## Testing (not done yet)
+## Testing
+(not done yet)
 ### Running Unit Tests
 Unit tests are written using Jest to test the logic behind message fetching, notifications, and message state management.
 1. Install the testing dependencies:
